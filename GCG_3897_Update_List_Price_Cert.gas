@@ -1,0 +1,755 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Update_Price..create
+gui.SS_Update_Price..caption("Update List Price")
+gui.SS_Update_Price..size(6160,5625)
+gui.SS_Update_Price..minx(0)
+gui.SS_Update_Price..miny(0)
+gui.SS_Update_Price..position(10290,4620)
+gui.SS_Update_Price..event(unload,ss_update_price_unload)
+gui.SS_Update_Price..alwaysontop(False)
+gui.SS_Update_Price..fontname("Arial")
+gui.SS_Update_Price..fontsize(8)
+gui.SS_Update_Price..forecolor(0)
+gui.SS_Update_Price..fontstyle(,,,,)
+gui.SS_Update_Price..BackColor(-2147483633)
+gui.SS_Update_Price..controlbox(True)
+gui.SS_Update_Price..maxbutton(False)
+gui.SS_Update_Price..minbutton(False)
+gui.SS_Update_Price..mousepointer(0)
+gui.SS_Update_Price..moveable(True)
+gui.SS_Update_Price..sizeable(False)
+gui.SS_Update_Price..ShowInTaskBar(True)
+gui.SS_Update_Price..titlebar(True)
+gui.SS_Update_Price.lbl_txtSpreadsheet.create(label,"Select Spreadsheet",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Update_Price.lbl_txtSpreadsheet.defaultvalue("")
+gui.SS_Update_Price.lbl_txtSpreadsheet.controlgroup(0)
+gui.SS_Update_Price.txtSpreadsheet.create(textbox,"",True,5340,330,0,100,335,True,0,Arial,8,16777215,1)
+gui.SS_Update_Price.txtSpreadsheet.defaultvalue("")
+gui.SS_Update_Price.txtSpreadsheet.controlgroup(0)
+gui.SS_Update_Price.cmd_txtSpreadsheet.create(button)
+gui.SS_Update_Price.cmd_txtSpreadsheet.caption("^")
+gui.SS_Update_Price.cmd_txtSpreadsheet.visible(True)
+gui.SS_Update_Price.cmd_txtSpreadsheet.size(345,330)
+gui.SS_Update_Price.cmd_txtSpreadsheet.zorder(0)
+gui.SS_Update_Price.cmd_txtSpreadsheet.position(5500,335)
+gui.SS_Update_Price.cmd_txtSpreadsheet.enabled(True)
+gui.SS_Update_Price.cmd_txtSpreadsheet.fontname("Arial")
+gui.SS_Update_Price.cmd_txtSpreadsheet.fontsize(8)
+gui.SS_Update_Price.cmd_txtSpreadsheet.event(click,cmd_txtspreadsheet_click)
+gui.SS_Update_Price.cmd_txtSpreadsheet.defaultvalue("")
+gui.SS_Update_Price.cmd_txtSpreadsheet.controlgroup(0)
+gui.SS_Update_Price.lbl_txtBegLoc.create(label,"Beginning Location",True,1800,200,1,100,750,True,0,Arial,8,-2147483633,0)
+gui.SS_Update_Price.lbl_txtBegLoc.defaultvalue("")
+gui.SS_Update_Price.lbl_txtBegLoc.controlgroup(0)
+gui.SS_Update_Price.txtBegLoc.create(textbox,"",True,1800,330,0,100,950,True,0,Arial,8,16777215,1)
+gui.SS_Update_Price.txtBegLoc.event(lostfocus,txtbegloc_lostfocus)
+gui.SS_Update_Price.txtBegLoc.defaultvalue("")
+gui.SS_Update_Price.txtBegLoc.controlgroup(0)
+gui.SS_Update_Price.cmd_txtBegLoc.create(button)
+gui.SS_Update_Price.cmd_txtBegLoc.caption("^")
+gui.SS_Update_Price.cmd_txtBegLoc.visible(True)
+gui.SS_Update_Price.cmd_txtBegLoc.size(345,330)
+gui.SS_Update_Price.cmd_txtBegLoc.zorder(0)
+gui.SS_Update_Price.cmd_txtBegLoc.position(1985,950)
+gui.SS_Update_Price.cmd_txtBegLoc.enabled(True)
+gui.SS_Update_Price.cmd_txtBegLoc.fontname("Arial")
+gui.SS_Update_Price.cmd_txtBegLoc.fontsize(8)
+gui.SS_Update_Price.cmd_txtBegLoc.event(click,cmd_txtbegloc_click)
+gui.SS_Update_Price.cmd_txtBegLoc.defaultvalue("")
+gui.SS_Update_Price.cmd_txtBegLoc.controlgroup(0)
+gui.SS_Update_Price.lbl_txtEndLoc.create(label,"Ending Location",True,1800,200,1,2455,750,True,0,Arial,8,-2147483633,0)
+gui.SS_Update_Price.lbl_txtEndLoc.defaultvalue("")
+gui.SS_Update_Price.lbl_txtEndLoc.controlgroup(0)
+gui.SS_Update_Price.txtEndLoc.create(textbox,"",True,1800,330,0,2455,950,True,0,Arial,8,16777215,1)
+gui.SS_Update_Price.txtEndLoc.defaultvalue("")
+gui.SS_Update_Price.txtEndLoc.controlgroup(0)
+gui.SS_Update_Price.cmd_txtEndLoc.create(button)
+gui.SS_Update_Price.cmd_txtEndLoc.caption("^")
+gui.SS_Update_Price.cmd_txtEndLoc.visible(True)
+gui.SS_Update_Price.cmd_txtEndLoc.size(345,330)
+gui.SS_Update_Price.cmd_txtEndLoc.zorder(0)
+gui.SS_Update_Price.cmd_txtEndLoc.position(4340,950)
+gui.SS_Update_Price.cmd_txtEndLoc.enabled(True)
+gui.SS_Update_Price.cmd_txtEndLoc.fontname("Arial")
+gui.SS_Update_Price.cmd_txtEndLoc.fontsize(8)
+gui.SS_Update_Price.cmd_txtEndLoc.event(click,cmd_txtendloc_click)
+gui.SS_Update_Price.cmd_txtEndLoc.defaultvalue("")
+gui.SS_Update_Price.cmd_txtEndLoc.controlgroup(0)
+gui.SS_Update_Price.chkAllLocations.create(checkbox)
+gui.SS_Update_Price.chkAllLocations.caption("Select All Locations")
+gui.SS_Update_Price.chkAllLocations.visible(True)
+gui.SS_Update_Price.chkAllLocations.size(1800,300)
+gui.SS_Update_Price.chkAllLocations.zorder(0)
+gui.SS_Update_Price.chkAllLocations.position(100,1285)
+gui.SS_Update_Price.chkAllLocations.enabled(True)
+gui.SS_Update_Price.chkAllLocations.alignment(0)
+gui.SS_Update_Price.chkAllLocations.fontname("Arial")
+gui.SS_Update_Price.chkAllLocations.fontsize(8)
+gui.SS_Update_Price.chkAllLocations.event(click,chkalllocations_click)
+gui.SS_Update_Price.chkAllLocations.defaultvalue("")
+gui.SS_Update_Price.chkAllLocations.controlgroup(0)
+gui.SS_Update_Price.lbl_lvwLocRange.create(label,"Location Range",True,1800,200,1,100,1835,True,0,Arial,8,-2147483633,0)
+gui.SS_Update_Price.lbl_lvwLocRange.defaultvalue("")
+gui.SS_Update_Price.lbl_lvwLocRange.controlgroup(0)
+gui.SS_Update_Price.lvwLocRange.create(listview)
+gui.SS_Update_Price.lvwLocRange.view(3)
+gui.SS_Update_Price.lvwLocRange.addlistviewcolumn("Beginning Location",2705,0)
+gui.SS_Update_Price.lvwLocRange.addlistviewcolumn("Ending Location",2705,0)
+gui.SS_Update_Price.lvwLocRange.visible(True)
+gui.SS_Update_Price.lvwLocRange.size(5810,2000)
+gui.SS_Update_Price.lvwLocRange.zorder(0)
+gui.SS_Update_Price.lvwLocRange.position(100,2035)
+gui.SS_Update_Price.lvwLocRange.enabled(True)
+gui.SS_Update_Price.lvwLocRange.fontname("Arial")
+gui.SS_Update_Price.lvwLocRange.fontsize(8)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.create(button)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.caption("Add")
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.visible(True)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.size(1000,330)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.zorder(0)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.position(4810,950)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.enabled(True)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.fontname("Arial")
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.fontsize(8)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.event(click,cmd_lvwlocrangeadd_click)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.SetInternationalID(7600)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.defaultvalue("")
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.controlgroup(0)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.create(button)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.caption("Delete")
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.visible(True)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.size(1000,330)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.zorder(0)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.position(100,4120)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.enabled(True)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.fontname("Arial")
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.fontsize(8)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.event(click,cmd_lvwlocrangedelete_click)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.SetInternationalID(171500)
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.defaultvalue("")
+gui.SS_Update_Price.cmd_lvwLocRangeDelete.controlgroup(0)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.create(button)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.caption("Clear")
+gui.SS_Update_Price.cmd_lvwLocRangeClear.visible(True)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.size(1000,330)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.zorder(0)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.position(1185,4120)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.enabled(True)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.fontname("Arial")
+gui.SS_Update_Price.cmd_lvwLocRangeClear.fontsize(8)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.event(click,cmd_lvwlocrangeclear_click)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.SetInternationalID(106700)
+gui.SS_Update_Price.cmd_lvwLocRangeClear.defaultvalue("")
+gui.SS_Update_Price.cmd_lvwLocRangeClear.controlgroup(0)
+gui.SS_Update_Price.cmdUpdate.create(button)
+gui.SS_Update_Price.cmdUpdate.caption("Update")
+gui.SS_Update_Price.cmdUpdate.visible(True)
+gui.SS_Update_Price.cmdUpdate.size(1000,360)
+gui.SS_Update_Price.cmdUpdate.zorder(0)
+gui.SS_Update_Price.cmdUpdate.position(100,4650)
+gui.SS_Update_Price.cmdUpdate.enabled(True)
+gui.SS_Update_Price.cmdUpdate.fontname("Arial")
+gui.SS_Update_Price.cmdUpdate.fontsize(8)
+gui.SS_Update_Price.cmdUpdate.event(click,cmdupdate_click)
+gui.SS_Update_Price.cmdUpdate.defaultvalue("")
+gui.SS_Update_Price.cmdUpdate.controlgroup(0)
+gui.SS_Update_Price.chkIncludeBlank.create(checkbox)
+gui.SS_Update_Price.chkIncludeBlank.caption("Include Blank Locations")
+gui.SS_Update_Price.chkIncludeBlank.visible(True)
+gui.SS_Update_Price.chkIncludeBlank.size(2100,255)
+gui.SS_Update_Price.chkIncludeBlank.zorder(0)
+gui.SS_Update_Price.chkIncludeBlank.position(1900,1285)
+gui.SS_Update_Price.chkIncludeBlank.enabled(True)
+gui.SS_Update_Price.chkIncludeBlank.alignment(0)
+gui.SS_Update_Price.chkIncludeBlank.fontname("Arial")
+gui.SS_Update_Price.chkIncludeBlank.fontsize(8)
+gui.SS_Update_Price.chkIncludeBlank.defaultvalue("")
+gui.SS_Update_Price.chkIncludeBlank.controlgroup(0)
+gui.SS_Update_Price.txtSpreadsheet.tabstop(true)
+gui.SS_Update_Price.txtSpreadsheet.tabindex(1)
+gui.SS_Update_Price.cmd_txtSpreadsheet.tabstop(true)
+gui.SS_Update_Price.cmd_txtSpreadsheet.tabindex(2)
+gui.SS_Update_Price.txtBegLoc.tabstop(true)
+gui.SS_Update_Price.txtBegLoc.tabindex(3)
+gui.SS_Update_Price.cmd_txtBegLoc.tabstop(true)
+gui.SS_Update_Price.cmd_txtBegLoc.tabindex(4)
+gui.SS_Update_Price.txtEndLoc.tabstop(true)
+gui.SS_Update_Price.txtEndLoc.tabindex(5)
+gui.SS_Update_Price.cmd_txtEndLoc.tabstop(true)
+gui.SS_Update_Price.cmd_txtEndLoc.tabindex(6)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.tabstop(true)
+gui.SS_Update_Price.cmd_lvwLocRangeAdd.tabindex(7)
+gui.SS_Update_Price.chkAllLocations.tabstop(true)
+gui.SS_Update_Price.chkAllLocations.tabindex(8)
+gui.SS_Update_Price.cmdUpdate.tabstop(true)
+gui.SS_Update_Price.cmdUpdate.tabindex(9)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.iKey.Declare(Long,0)
+Variable.Global.sKeys.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'7/29/10 by SMC for Customer Simpson - Quote 1363
+'Custom Hook
+'7/29/2015
+'Updated BCC GSS Certified
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.Control.CallSub(Chkalllocations_click)
+Gui.SS_Update_Price..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.cmdupdate_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdupdate_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sXLS.Declare(String)
+V.Local.bRet.Declare(Boolean)
+
+'Check to make sure user selected spreadsheet and that selected spreadsheet exists
+F.Intrinsic.Control.If(V.Screen.SS_Update_Price!txtSpreadsheet.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Select valid file path of spreadsheet")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Screen.SS_Update_Price!txtSpreadsheet.Text,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,False)
+	F.Intrinsic.UI.Msgbox("Select valid file path of spreadsheet")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.SS_Update_Price.lvwLocRange.RetrieveAllListItems(V.Global.sKeys)
+
+'Make sure user has selected at least one method of Location selection
+F.Intrinsic.Control.If(V.Global.sKeys.Trim,=,"***NORETURN***","AND",V.Screen.SS_Update_Price!chkAllLocations.Value,=,0)
+F.Intrinsic.Control.AndIf(V.Screen.SS_Update_Price!chkIncludeBlank.Value,=,0)
+	F.Intrinsic.UI.Msgbox("You must either check all locations, have at least one range selected, or select to include blank Locations.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.SS_update_price..Enabled(False)
+Gui.SS_update_price.cmdUpdate.Enabled(False)
+
+'Check if user has Excel or OOCalc installed
+F.Intrinsic.UI.InvokeWaitDialog("Reading spreadsheet...","Updating List Price")
+F.Automation.MSExcel.CheckPresence(V.Local.bRet)
+
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	F.Automation.MSExcel.ReadSpreadsheet(V.Screen.SS_Update_Price!txtSpreadsheet.Text,V.Local.sXLS)
+F.Intrinsic.Control.Else
+	F.Automation.OOGeneral.CheckPresence(V.Local.bRet)
+
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		F.Automation.OOCalc.ReadSpreadsheet(V.Screen.SS_Update_Price!txtSpreadsheet.Text,False,V.Local.sXLS)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Microsoft Excel or OOCalc required to execute .xls import")
+		F.Intrinsic.UI.CloseWaitDialog
+		Gui.SS_update_price..Enabled(True)
+		Gui.SS_update_price.cmdUpdate.Enabled(True)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+
+'Inform user if .XLS file has no data in it
+F.Intrinsic.Control.If(V.Local.sXLS,=,"")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.UI.Msgbox(".XLS file has no data.")
+	Gui.SS_update_price.cmdUpdate.Enabled(True)
+	Gui.SS_update_price..Enabled(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Update,"sXLS",V.Local.sXLS)
+
+F.Intrinsic.UI.CloseWaitDialog
+Gui.SS_update_price.cmdUpdate.Enabled(True)
+Gui.SS_update_price..Enabled(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdupdate_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdupdate_click.end
+
+Program.Sub.Update.Start
+F.Intrinsic.Control.SetErrorHandler("Update_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRows.Declare(String)
+V.Local.iR.Declare(String)
+V.Local.sCols.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sXLS.Declare(String)
+V.Local.iSheetCount.Declare(String)
+V.Local.iTemp.Declare(Long)
+V.Local.sStatus.Declare(String)
+V.Local.iRows.Declare(Long)
+V.Local.sFile.Declare(String)
+V.Local.sMissingParts.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sKeys.Declare(String)
+V.Local.iKeyCount.Declare(Long)
+V.Local.iOrd.Declare(Long)
+V.Local.sRange.Declare(String)
+V.Local.sTemp.Declare(String)
+
+V.Local.sXLS.Set(V.Args.sXLS)
+F.Intrinsic.String.Split(V.Local.sXLS,"&^&",V.Local.sXLS)
+
+'Iterate through each sheet in the file. Each sheet must begin with the Part and List Price Headers
+F.Intrinsic.Control.For(V.Local.iSheetCount,0,V.Local.sXLS.UBound,1)
+	F.Intrinsic.String.Split(V.Local.sXLS(v.Local.iSheetCount),"$!$",V.Local.sRows)
+	F.Intrinsic.String.Split(V.Local.sRows(0).UCase,"*!*",V.Local.sCols)
+
+	'Check that sheet is formatted properly, if it isn't inform user and move to next sheet if it exists
+	F.Intrinsic.Control.If(V.Local.sCols(0).rtrim,<>,"PART","OR",V.Local.sCols(1).RTrim,<>,"LIST PRICE")
+		F.Intrinsic.Math.Add(V.Local.iSheetCount,1,V.Local.iTemp)
+		F.Intrinsic.String.Build(".XLS Sheet {0} is not a List Price file (Column headers must be 'PART' and 'LIST PRICE')",V.Local.iTemp,V.Local.sTemp)
+		F.Intrinsic.UI.Msgbox(V.Local.sTemp)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.Local.sRows.UBound,1,V.Local.iRows)
+		F.Intrinsic.Math.Add(V.Local.iSheetCount,1,V.Local.iTemp)
+		F.Intrinsic.String.Build("Reading Sheet {0}...",V.Local.iTemp,V.Local.sStatus)
+		F.Intrinsic.Control.For(V.Local.iR,1,V.Local.sRows.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sRows(v.Local.iR),"*!*",V.Local.sCols)
+			
+			'Check to make sure a part is actually in the field in the sheet, and that the List Price is numeric, if no part or Numberic List Price move to next row
+			F.Intrinsic.Control.If(V.Local.sCols(0).Trim,<>,"","AND",V.Local.sCols(1).IsNumeric,=,True)
+				'Range Locations excluding blanks
+				F.Intrinsic.Control.If(V.Screen.SS_Update_Price!chkAllLocations.Value,=,0,"AND",V.Screen.SS_Update_Price!chkIncludeBlank.Value,=,0)
+					F.Intrinsic.String.Split(V.Global.sKeys,"*!*",V.Local.sKeys)
+
+					'Loop through each range, and update based on the ranges given
+					F.Intrinsic.Control.For(V.Local.iKeyCount,0,V.Local.sKeys.UBound,1)
+						Gui.SS_Update_Price.lvwLocRange.ListitemKeyToOrdinal(V.Local.sKeys(V.Local.iKeyCount),V.Local.iOrd)
+						V.Local.sRange.Set(V.Screen.SS_Update_Price!lvwLocRange.ListItemTextExtended(V.Local.iOrd))
+						F.Intrinsic.String.Split(V.Local.sRange,"*!*",V.Local.sRange)
+						V.Local.sRange.RedimPreserve(0,1)
+						F.Intrinsic.String.SortAsc(V.Local.sRange,V.Local.sRange)
+						F.Intrinsic.String.Build("SELECT PART, LOCATION FROM INVENTORY_MSTR WHERE PART='{0}' AND LOCATION BETWEEN '{1}' AND '{2}' AND LOCATION <> ''",V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sQuery)
+						F.ODBC.Connection!conx.OpenLocalRecordSetRO("rstParts",V.Local.sQuery)
+
+						F.Intrinsic.Control.If(V.ODBC.conx!rstParts.EOF,=,True)
+
+							F.Intrinsic.Control.If(V.Local.sMissingParts,=,"")
+								V.Local.sMissingParts.Set("The following parts could not be found:")
+							F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.String.Build("{0}{1}PART: {2} LOCATION: BETWEEN {3} AND {4}",V.Local.sMissingParts,V.Ambient.NewLine,V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sMissingParts)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.String.Build("UPDATE INVENTORY_MSTR SET AMT_PRICE='{0}' WHERE PART='{1}' AND LOCATION BETWEEN '{2}' AND '{3}'",V.Local.sCols(1),V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sQuery)
+							F.ODBC.Connection!conx.Execute(V.Local.sQuery)
+						F.Intrinsic.Control.EndIf
+
+						F.ODBC.conx!rstParts.Close
+					F.Intrinsic.Control.Next(V.Local.iKeyCount)
+
+				'Range Locations including blanks
+				F.Intrinsic.Control.ElseIf(V.Screen.SS_Update_Price!chkAllLocations.Value,=,0,"AND",V.Screen.SS_Update_Price!chkIncludeBlank.Value,=,1)
+				F.Intrinsic.Control.AndIf(V.Global.sKeys,<>,"***NORETURN***")
+					F.Intrinsic.String.Split(V.Global.sKeys,"*!*",V.Local.sKeys)
+
+					'Loop through each range, and update based on the ranges given
+					F.Intrinsic.Control.For(V.Local.iKeyCount,0,V.Local.sKeys.UBound,1)
+						Gui.SS_Update_Price.lvwLocRange.ListitemKeyToOrdinal(V.Local.sKeys(V.Local.iKeyCount),V.Local.iOrd)
+						V.Local.sRange.Set(V.Screen.SS_Update_Price!lvwLocRange.ListItemTextExtended(V.Local.iOrd))
+						F.Intrinsic.String.Split(V.Local.sRange,"*!*",V.Local.sRange)
+						V.Local.sRange.RedimPreserve(0,1)
+						F.Intrinsic.String.SortAsc(V.Local.sRange,V.Local.sRange)
+						F.Intrinsic.String.Build("SELECT PART, LOCATION FROM INVENTORY_MSTR WHERE PART='{0}' AND (LOCATION BETWEEN '{1}' AND '{2}' OR LOCATION = '')",V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sQuery)
+						F.ODBC.Connection!conx.OpenLocalRecordSetRO("rstParts",V.Local.sQuery)
+
+						F.Intrinsic.Control.If(V.ODBC.conx!rstParts.EOF,=,True)
+
+							F.Intrinsic.Control.If(V.Local.sMissingParts,=,"")
+								V.Local.sMissingParts.Set("The following parts could not be found:")
+							F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.String.Build("{0}{1}PART: {2} LOCATION: BETWEEN {3} AND {4} Including Blanks",V.Local.sMissingParts,V.Ambient.NewLine,V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sMissingParts)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.String.Build("UPDATE INVENTORY_MSTR SET AMT_PRICE='{0}' WHERE PART='{1}' AND (LOCATION BETWEEN '{2}' AND '{3}' OR LOCATION = '')",V.Local.sCols(1),V.Local.sCols(0),V.Local.sRange(0),V.Local.sRange(1),V.Local.sQuery)
+							F.ODBC.Connection!conx.Execute(V.Local.sQuery)
+						F.Intrinsic.Control.EndIf
+
+						F.ODBC.conx!rstParts.Close
+					F.Intrinsic.Control.Next(V.Local.iKeyCount)
+
+				'Only Blank Locations
+				F.Intrinsic.Control.ElseIf(V.Screen.SS_Update_Price!chkAllLocations.Value,=,0,"AND",V.Global.sKeys,=,"***NORETURN***")
+				F.Intrinsic.Control.AndIf(V.Screen.SS_Update_Price!chkIncludeBlank.Value,=,1)
+					F.Intrinsic.String.Build("SELECT PART, LOCATION FROM INVENTORY_MSTR WHERE PART = '{0}' AND LOCATION = ''",V.Local.sCols(0),V.Local.sQuery)
+					F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstParts",V.Local.sQuery)
+					
+					F.Intrinsic.Control.If(V.ODBC.conx!rstParts.EOF,=,True)
+
+						F.Intrinsic.Control.If(V.Local.sMissingParts,=,"")
+							V.Local.sMissingParts.Set("The following parts could not be found:")
+						F.Intrinsic.Control.EndIf
+
+						F.Intrinsic.String.Build("{0}{1}PART: {2} LOCATION: ***BLANK***",V.Local.sMissingParts,V.Ambient.NewLine,V.Local.sCols(0),V.Local.sMissingParts)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("UPDATE INVENTORY_MSTR SET AMT_PRICE='{0}' WHERE PART='{1}' AND LOCATION =''",V.Local.sCols(1),V.Local.sCols(0),V.Local.sQuery)
+						F.ODBC.Connection!conx.Execute(V.Local.sQuery)
+					F.Intrinsic.Control.EndIf
+
+					F.ODBC.conx!rstParts.Close
+
+				'All Locations
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("SELECT PART, LOCATION FROM INVENTORY_MSTR WHERE PART = '{0}'",V.Local.sCols(0),V.Local.sQuery)
+					F.ODBC.Connection!conx.OpenLocalRecordSetRO("rstParts",V.Local.sQuery)
+
+					F.Intrinsic.Control.If(V.ODBC.conx!rstParts.EOF,=,True)
+
+						F.Intrinsic.Control.If(V.Local.sMissingParts,=,"")
+							V.Local.sMissingParts.Set("The following parts could not be found:")
+						F.Intrinsic.Control.EndIf
+
+						F.Intrinsic.String.Build("{0}{1}PART: {2}",V.Local.sMissingParts,V.Ambient.NewLine,V.Local.sCols(0),V.Local.sMissingParts)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("UPDATE INVENTORY_MSTR SET AMT_PRICE='{0}' WHERE PART='{1}'",V.Local.sCols(1),V.Local.sCols(0),V.Local.sQuery)
+						F.ODBC.Connection!conx.Execute(V.Local.sQuery)
+					F.Intrinsic.Control.EndIf
+
+					F.ODBC.conx!rstParts.Close
+				
+				F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Math.Add(V.Local.iR,1,V.Local.iTemp)
+		F.Intrinsic.UI.ChangeWaitStatus(V.Local.sStatus,V.Local.iTemp,1,V.Local.iRows)
+	F.Intrinsic.Control.Next(V.Local.iR)
+F.Intrinsic.Control.Next(V.Local.iSheetCount)
+
+F.Intrinsic.Control.If(V.Local.sMissingParts,<>,"")
+	F.Intrinsic.String.Build("{0}\Update_List_Price_Missing_Parts.txt",V.Caller.TempDir,V.Local.sFile)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sMissingParts)
+	F.Intrinsic.File.GetHandle(V.Local.iRet)
+	F.Intrinsic.Task.ShellExec(V.Caller.Handle,"OPEN",V.Local.sFile,"","",5)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Cmd_lvwlocrangeclear_click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Update_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Update.End
+
+program.sub.cmd_lvwlocrangeadd_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwlocrangeadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sBeg.Declare(String)
+V.Local.sEnd.Declare(String)
+
+V.Local.sBeg.Set(V.Screen.SS_Update_Price!txtBegLoc.Text)
+V.Local.sEnd.Set(V.Screen.SS_Update_Price!txtEndLoc.Text)
+
+F.Intrinsic.Control.If(V.Local.sBeg.Trim,=,"","OR",V.Local.sEnd.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("You must select a beginning range and end location.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Add(V.Global.iKey,1,V.Global.iKey)
+Gui.SS_Update_Price.lvwLocRange.AddListItem(V.Global.iKey,V.Local.sBeg.Trim)
+Gui.SS_Update_Price.lvwLocRange.SetListItemSubItemText(V.Global.iKey,1,V.Local.sEnd)
+
+Gui.SS_Update_Price.txtBegLoc.Text("")
+Gui.SS_Update_Price.txtEndLoc.Text("")
+Gui.SS_Update_Price.txtBegLoc.SetFocus
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwlocrangeadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvwlocrangeadd_click.end
+
+program.sub.txtbegloc_lostfocus.start
+F.Intrinsic.Control.SetErrorHandler("txtbegloc_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Update_Price!txtEndLoc.Text,=,"")
+	Gui.SS_Update_Price.txtEndLoc.Text(V.Screen.SS_Update_Price!txtBegLoc.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtbegloc_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txtbegloc_lostfocus.end
+
+program.sub.cmd_txtbegloc_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtbegloc_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sCol.Declare(String)
+V.Local.sColW.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("Location*!*Description","*!*",V.Local.sCol)
+F.Intrinsic.String.Split("1500*!*3500","*!*",V.Local.sColW)
+V.Local.sQuery.Set("SELECT DISTINCT LOCATION, LOCATION_DESC FROM V_LOCATIONS WHERE LOCATION <> '' Order By LOCATION ASC")
+
+F.Intrinsic.UI.Browser("Select a Location","conx",V.Local.sQuery,V.Local.sCol,V.Local.sColW,5000,5000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Update_Price.txtBegLoc.Text(V.Local.sRet(0))
+	F.Intrinsic.Control.CallSub(Txtbegloc_lostfocus)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtbegloc_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtbegloc_click.end
+
+program.sub.cmd_txtspreadsheet_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtspreadsheet_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sFile.Declare(String)
+
+F.Intrinsic.UI.ShowOpenFileDialog("","XLS [.xls]|*.xls","C:\",V.local.sFile)
+
+F.Intrinsic.Control.If(V.Local.sFile,<>,"***CANCEL***")
+	Gui.SS_Update_Price.txtSpreadsheet.Text(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtspreadsheet_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtspreadsheet_click.end
+
+program.sub.cmd_lvwlocrangedelete_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwlocrangedelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare(String)
+
+Gui.SS_Update_Price.lvwLocRange.RetrieveSelectedListitems(V.Local.iKey)
+Gui.SS_Update_Price.lvwLocRange.RemoveItem(V.Local.iKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwlocrangedelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvwlocrangedelete_click.end
+
+program.sub.cmd_lvwlocrangeclear_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvwlocrangeclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Update_Price.lvwLocRange.ClearItems
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvwlocrangeclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvwlocrangeclear_click.end
+
+program.sub.chkalllocations_click.start
+F.Intrinsic.Control.SetErrorHandler("chkalllocations_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Update_Price!chkAllLocations.Value,=,1)
+	Gui.SS_Update_Price.lvwLocRange.ClearItems
+	Gui.SS_Update_Price.lvwLocRange.Enabled(False)
+	Gui.SS_Update_Price.txtBegLoc.Enabled(False)
+	Gui.SS_Update_Price.txtBegLoc.Text("")
+	Gui.SS_Update_Price.txtEndLoc.Enabled(False)
+	Gui.SS_Update_Price.txtEndLoc.Text("")
+	Gui.SS_Update_Price.cmd_txtBegLoc.Enabled(False)
+	Gui.SS_Update_Price.cmd_txtEndLoc.Enabled(False)
+	Gui.SS_Update_Price.cmd_lvwLocRangeAdd.Enabled(False)
+	Gui.SS_Update_Price.cmd_lvwLocRangeClear.Enabled(False)
+	Gui.SS_Update_Price.cmd_lvwLocRangeDelete.Enabled(False)
+	Gui.SS_Update_Price.chkIncludeBlank.Value(1)
+	Gui.SS_Update_Price.chkIncludeBlank.Enabled(False)
+F.Intrinsic.Control.Else
+	Gui.SS_Update_Price.lvwLocRange.Enabled(True)
+	Gui.SS_Update_Price.txtBegLoc.Enabled(True)
+	Gui.SS_Update_Price.txtEndLoc.Enabled(True)
+	Gui.SS_Update_Price.cmd_txtBegLoc.Enabled(True)
+	Gui.SS_Update_Price.cmd_txtEndLoc.Enabled(True)
+	Gui.SS_Update_Price.cmd_lvwLocRangeAdd.Enabled(True)
+	Gui.SS_Update_Price.cmd_lvwLocRangeClear.Enabled(True)
+	Gui.SS_Update_Price.cmd_lvwLocRangeDelete.Enabled(True)
+	Gui.SS_Update_Price.chkIncludeBlank.Value(0)
+	Gui.SS_Update_Price.chkIncludeBlank.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkalllocations_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkalllocations_click.end
+
+program.sub.cmd_txtendloc_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtendloc_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sCol.Declare(String)
+V.Local.sColW.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("Location*!*Description","*!*",V.Local.sCol)
+F.Intrinsic.String.Split("1500*!*3500","*!*",V.Local.sColW)
+V.Local.sQuery.Set("SELECT DISTINCT LOCATION, LOCATION_DESC FROM V_LOCATIONS WHERE LOCATION <> '' ORDER BY LOCATION ASC")
+
+F.Intrinsic.UI.Browser("Select a Location","conx",V.Local.sQuery,V.Local.sCol,V.Local.sColW,5000,5000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Update_Price.txtEndLoc.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtendloc_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_update_price_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtendloc_click.end
+
+program.sub.ss_update_price_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_update_price_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_update_price_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3897_Update_List_Price_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.ss_update_price_unload.end
+
+Program.Sub.Comments.Start
+${$0$}$GCG_Update_List_Price_Cert$}$ERIC$}$10/6/2015
+${$2$}$$}$$}$1$}$4$}$Custom Menu Item$}$10/20/2015 3:02:40 PM$}$This will call the program.
+Menu Name: Update List Price
+Module: Inventory
+Header: Administration
+${$2$}$$}$$}$0$}$1$}$.xls Spreadsheet$}$10/6/2015 2:58:27 PM$}$The spreadsheet format is as follows:
+
+These are the Header Columns. Without these headers the program will not work.
+A1 - Part
+B1 - List Price
+
+A2 - A* - Everything below the Part header will be the Part Number you want to update.
+B2 - B* - Everything below the List Price will contain the new value for the corresponding part next to it.
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$This updates the Inventory List Price from a spreadsheet. The spreadsheet format is as follows:
+
+These are the Header Columns. Without these headers the program will not work.
+A1 - Part
+B1 - List Price
+
+A2 - A* - Everything below the Part header will be the Part Number you want to update.
+B2 - B* - Everything below the List Price will contain the new value for the corresponding part next to it.
+${$4$}$0$}$$}$0$}$-1$}$BCC$}$10/6/2015 2:54:57 PM$}$Updated to GS Certified. Cleaned up code. Added error handling. Updated slow functions such as String.Concat by replacing it with String.Build. Should work for any Customer.
+Program.Sub.Comments.End
+
